@@ -28,18 +28,20 @@ Make a vertical bar graph using `plt.bar()` for the following set of data:
 import numpy as np
 import matplotlib.pyplot as plt
 
-y = None
-x =None
-labels = None
+y = [40, 30, 10, 50, 25, 5]
+x = ["crime/mystery", "science fiction", "drama", "comedy", "action", "documentary"]
+labels = ["Genre", "Count"]
 
 # Set a figure size
-
+plt.figure(figsize=(10,6))
 # Plot vertical bars of fixed width by passing x and y values to .bar() function 
-
+plt.bar(x, y, color="red")
 # Give a title to the bar graph
-
+plt.title("Jim's Video Library by Genre")
+plt.xlabel(labels[0])
+plt.ylabel(labels[1])
 # Output the final plot
-
+plt.show()
 ```
 
 
@@ -72,13 +74,17 @@ Looking the scatter plot, how would you describe the relationship between these 
 ```python
 weight = [2750, 3125, 2100, 4082, 2690, 3640, 4380, 2241, 2895, 3659]
 mpg = [29, 23, 33, 28, 20, 21, 14, 25, 31, 17]
+labels = ["Weight", "MPG"]
 
 # Set the figure size in inches
-
+plt.figure(figsize=(10,6))
 # Plot with scatter()
-
+plt.scatter(weight, mpg)
+plt.xlabel(labels[0])
+plt.ylabel(labels[1])
+plt.title("Consumer Cars")
 # Set x and y axes labels and give titles
-
+plt.show()
 ```
 
 
@@ -98,12 +104,16 @@ Joe is the branch manager at a bank. Recently, Joe been receiving customer feedb
 
 
 ```python
-x = None
+x = [43.1, 35.6, 37.5, 36.5, 45.3, 43.4, 40.3, 50.2, 47.3, 31.2, 42.2, 45.5, 30.3, 31.4, 35.6, 45.2, 54.1, 45.6, 36.5, 43.1]
+labels = ["Waiting Time (s)", "Count"]
 
 #Plot the distogram with hist() function
-
+plt.hist(x, bins=5)
+plt.xlabel(labels[0])
+plt.ylabel(labels[1])
+plt.title("Histogram of Waiting Times")
 # Label, give title and show the plot
-
+plt.show()
 ```
 
 
